@@ -1,7 +1,7 @@
 filter-comments
 ===============
 Filters different types of comments from different languages.
-Requires python.
+Requires python. By Caleb Butler.
 
 Comment Types
 -------------
