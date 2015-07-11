@@ -19,11 +19,11 @@ import sys
 class FilterComments:
 
     comment_types = {
-        'Haskell' : ['---\n', '-- '],
-        'Shell' : ['##\n', '# '],
-        'Lisp' : [';;;\n', '; '],
-        'Java' : ['///\n', '// '],
-        'C' : ['/**\n', ' * ']
+        'Haskell' : ['---\n', '-- ', '--\n'],
+        'Shell' : ['##\n', '# ', '#\n'],
+        'Lisp' : [';;;\n', '; ', ';\n'],
+        'Java' : ['///\n', '// ', '//\n'],
+        'C' : ['/**\n', ' * ', ' *\n']
     }
 
     flags = 'hksljco:'
@@ -82,6 +82,8 @@ class FilterComments:
         else:
             if line[:len(self.style[1])] == self.style[1]:
                 file_buffer += line[len(self.style[1]):]
+            elif line[:len(self.style[1])] == self.style[1]:
+                file_buffer += '\n'
             else:
                 file_buffer += '\n'
                 in_comment = False
