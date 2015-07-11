@@ -1,6 +1,7 @@
 filter-comments
 ===============
 Filters different types of comments from different languages.
+Requires python.
 
 Comment Types
 -------------
