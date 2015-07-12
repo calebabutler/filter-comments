@@ -19,7 +19,7 @@ import sys
 class FilterComments:
 
     comment_types = {
-        'Haskell' : ['---\n', '-- ', , '--\t', '--\n'],
+        'Haskell' : ['---\n', '-- ', '--\t', '--\n'],
         'Shell' : ['##\n', '# ', '#\t', '#\n'],
         'Lisp' : [';;;\n', ';; ', ';;\t', ';;\n'],
         'Java' : ['///\n', '// ', '//\t', '//\n'],
@@ -97,7 +97,7 @@ class FilterComments:
         if self.output == None:
             output_file = sys.stdout
         else:
-            output_file = open(self.output, 'a')
+            output_file = open(self.output, 'w')
         file_buffer = '\n'
 
         for filename in self.inputs:
