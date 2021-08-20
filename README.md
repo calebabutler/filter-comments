@@ -58,3 +58,5 @@ C
  */
  
 ```
+
+This repository is now archived. I created this project when I was in middle school. It was my first ever programming project.
